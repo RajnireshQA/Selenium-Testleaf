@@ -1,5 +1,7 @@
 package week2.day1;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Login {
@@ -9,9 +11,9 @@ public class Login {
 				"./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://leaftaps.com/opentaps");
-		//maximize the browser
 		driver.manage().window().maximize();
-		driver.findElementById("username").sendKeys("DemoSalesManager");
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.findElementById("username1").sendKeys("DemoSalesManager");
 		driver.findElementById("password").sendKeys("crmsfa");
 		driver.findElementByClassName("decorativeSubmit").click();
 		driver.findElementByLinkText("CRM/SFA").click();
