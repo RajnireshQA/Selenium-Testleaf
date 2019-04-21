@@ -20,5 +20,16 @@ public class Mobilefor2020 implements Mobile2020{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void dualDisplay() {
+		System.out.println("Dual display");
+	}
+	
+	
+	
+	
+	
+	
+	
 
 }
